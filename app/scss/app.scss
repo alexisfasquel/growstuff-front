@@ -1,22 +1,39 @@
 @import "settings";
 @import "foundation";
 
+body {
+	height: auto;
+}
+
 // ------------------------------------------------------
 //							Topbar
 // ------------------------------------------------------
 
 .top-header {
-	height: $topbar-height+px;
+	height: $topbar-height;
 	border-top: $primary-color 3px solid;
-	background: white;
-	padding: 20px 0;
+	background: rgba(255,255,255,0.9);
+	padding: 25px 0 15px;
 
 	a.logo {
 		display: block;
 		height: 30px;
-		font-size: 2em;
-		padding-left: 40px;
+		font-size: 1.7em;
+		padding: 3px 0 0 45px;
 		background: url('../images/logo_m.png') no-repeat 0 0;
+	}
+
+	nav {
+		ul {
+			list-style-type: none;
+			float: right;
+			margin: 5px 0 0 0;
+			
+			li {
+				display: inline-block;
+				margin: 0 40px;
+			}
+		}
 	}
 }
 
@@ -26,10 +43,14 @@
 
 
 .master-header {
-	margin-top: ($topbar-height+40)+px;
-	color: white;
+	margin-top: $topbar-height;
 	padding: 50px 0 50px 0;
 	background: $primary-color;
+	color: white;
+
+	h3 {
+		color: white;
+	}
 }
 
 .featured {
