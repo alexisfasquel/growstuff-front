@@ -1,27 +1,73 @@
 <!doctype html>
-<html>
-<head>
+<html class="no-js" lang="en">
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mocha Spec Runner</title>
-    <link rel="stylesheet" href="bower_components/mocha/mocha.css">
-</head>
-<body>
-    <div id="mocha"></div>
-    <script src="bower_components/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd')</script>
-    <script src="bower_components/chai/chai.js"></script>
-    <script>
-        var assert = chai.assert;
-        var expect = chai.expect;
-        var should = chai.should();
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowStuff | Make your plant smarter!</title>
+    <link rel="stylesheet" href="styles/5dc238d3.app.css"/>
+    <script src="scripts/vendor/a52a8685.modernizr.js"></script>
+  </head>
+  <body>
+    <header role="banner" class="top-header fixed">
+      <div class="row">
+        <div class="large-6 columns">
+          <a href="/" class="logo">GrowStuff</a>
+        </div>
+        <div class="large-6 columns">
+          <nav role="navigation" class="menu">
+            <ul>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="diy.html">Do It Yourself</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    
+    <div class="master-header">
+      <div class="row">
+        <div class="large-6 columns">
+          <h3 class="text-center">Make your plants smarter!</h3>
+          <p>An Open Source project for a self-suficient plant.</p>
+        </div>
+        <div class="large-6 columns">
+          <img src="images/9369c781.intro.png">
+        </div>
+      </div>
+    </div>
 
-    <!-- include source files here... -->
+    <div class="featured">
+      <div class="row">
+        <h3 class="section-title text-center">Made with ♥ and with:</h3>
+      </div>
 
-    <!-- include spec files here... -->
-    <script src="spec/test.js"></script>
+      <div class="row list">
+        <div class="large-2 columns">
+          <a href="#"><img class="promo-logo" src="images/e8b71036.rasp.png" alt="RaspberryPi"></a>
+        </div>
+        
+        <div class="large-2 columns">
+          <a href="#"><img class="promo-logo" src="images/17ebe97a.arduino.png" alt="Arduino"></a>
+        </div>
 
-    <script>mocha.run()</script>
-</body>
+        <div class="large-2 columns">
+          <a href="#"><img class="promo-logo" src="images/d31a7156.twitter.png" alt="Twitter"></a>
+        </div>
+
+        <div class="large-2 columns">
+          <a href="#"><img class="promo-logo" src="images/ae18aafd.heroku.png" alt="Heroku"></a>
+        </div>
+
+        <div class="large-2 columns">
+          <a href="#"><img class="promo-logo" src="images/cfec58ac.node.png" alt="Node"></a>
+        </div>
+
+        <div class="large-2 columns">
+          <a href="#"><img class="promo-logo" src="images/8e7712e7.python.png" alt="Python"></a>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/vendor/43ee4419.vendor.js"></script>
+  </body>
 </html>
