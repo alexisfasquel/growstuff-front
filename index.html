@@ -8,8 +8,9 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>GrowStuff</title>
-        <link href="css/style.css" rel="stylesheet">
         <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
         
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/carousel.js"></script>
@@ -24,9 +25,9 @@
             <div class="container">
                 <img src="img/logo.png" height="40px" class="logo"/>
                 <nav role="navigation">
-                    <span>Home</span>
-                    <span>Getting started</span>
-                    <span>DIY</span>
+                    <a href="index.html"><span class="active">Home</span></a>
+                    <a href="getting-started.html"><span>Getting started</span></a>
+                    <a href="diy.html"><span>DIY</span></a>
                 </nav>
             </div>
             
@@ -34,25 +35,49 @@
         <div class="header small">
             <img src="img/logo.png" height="40px" class="logo"/>
             <nav role="navigation">
-                    <span>Test</span>
-                    <span>Test</span>
+                    <a href="index.html"><span class="active">Home</span></a>
+                    <a href="getting-started.html"><span>Getting started</span></a>
+                    <a href="diy.html"><span >DIY</span></a>
             </nav>
         </div>
         <div class="header-case"> </div>
         
+        <div class="section intro">
+            <div class="container">
+                <div class="col-md-6">
+                    <h1>What is growStuff?</h1>
+                    <p>Lorem ispun, on vera plus raed</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/rose.png" width="200px">
+                </div>
+            </div>    
         
-        <div class="wapper-1">
         </div>
         
+        <div class="section getstarted">
+            <div class="container">
+                <div class="col-md-6">
+                    <h1>What is growStuff?</h1>
+                    <p>Lorem ispun, on vera plus raed</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/rose.png" width="200px">
+                </div>
+            </div>    
+        
+        </div>
+<!--
+        
         <div id="myCarousel" class="carousel slide">
-      <!-- Indicators -->
+
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
+         Wrapper for slides 
         <div class="carousel-inner">
           <div class="item active">
             <div class="fill" style="background-image:url('img/slide/slide1.png');"></div>
@@ -76,20 +101,19 @@
             </div>
           </div>
         </div>
+-->
 
         <!-- Controls -->
         <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <i class="fa fa-angle-left"></i>
+          <i class="fa fa-angle-left"><</i>
         </a>
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <i class="fa fa-angle-right"></i>
+          <i class="fa fa-angle-right">></i>
         </a>
     </div>
         
-        <div class="wapper-2">
-        </div>
-        
-    <div class="section-techno">
+    
+    <div class="section techno">
 
       <div class="container">
         <h3 class="section-title text-center">Cutting edge techologies?</h3>
@@ -127,7 +151,13 @@
       </div><!-- /.container -->
 
     </div><!-- /.section-colored -->
+    
+    <div class="section-team">    
         
+    </div>    
+    
+    <div class="section footer">    </div>
+    
     </body>
 
 </html>
