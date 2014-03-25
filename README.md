@@ -16,7 +16,7 @@ Before running any of these commands you need to install all the requirements. T
 
 ```sh
 grunt serve				# launch the developement server
-grunt test				# start the tests
+grunt deploy			# push the actual version into gh-pages
 ```
 
 ## Work in progress

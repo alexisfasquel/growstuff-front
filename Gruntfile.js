@@ -262,6 +262,20 @@ module.exports = function (grunt) {
                 'svgmin',
                 'htmlmin'
             ]
+        },
+        buildcontrol: {
+          options: {
+            dir: 'dist',
+            commit: true,
+            push: true,
+            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+          },
+          pages: {
+            options: {
+              remote: 'git@github.com:alexisfasquel/growstuff-front.git',
+              branch: 'gh-pages'
+            }
+          }
         }
     });
 
@@ -300,10 +314,15 @@ module.exports = function (grunt) {
         'concat',
         'cssmin',
         'uglify',
-        'modernizr',
+        // 'modernizr',
         'copy:dist',
         'rev',
         'usemin'
+    ]);
+
+    grunt.registerTask('deploy', [
+        'build',
+        'buildcontrol:pages'
     ]);
 
     grunt.registerTask('dalekjs', [
