@@ -1,5 +1,6 @@
-@import "settings";
-@import "foundation";
+@import "settings",
+				"compass",
+				"foundation";
 
 body {
 	height: auto;
@@ -13,7 +14,7 @@ body {
 	height: $topbar-height;
 	border-top: $primary-color 3px solid;
 	background: rgba(255,255,255,0.9);
-	padding: 25px 0 15px;
+	padding: 35px 0 15px;
 
 	a.logo {
 		display: block;
@@ -28,10 +29,38 @@ body {
 			list-style-type: none;
 			float: right;
 			margin: 5px 0 0 0;
+				position: relative;
 			
 			li {
 				display: inline-block;
 				margin: 0 40px;
+				padding-bottom: 3px;
+				position: relative;
+				text-transform: uppercase;
+
+				a {
+					color: black;
+
+					&:hover {
+						color: darken($primary-color, 30);
+					}
+				}
+
+				&:after {
+					content: ' ';
+					position: absolute;
+					left: 50%;
+					bottom: 0;
+					height: 1px;
+					width: 0;
+					background: $primary-color;
+					@include transition(width 0.3s, left 0.3s);
+				}
+
+				&:hover:after, &.active:after {
+					width: 100%;
+					left: 0%;
+				}
 			}
 		}
 	}
