@@ -1,119 +1,27 @@
 <!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mocha Spec Runner</title>
+    <link rel="stylesheet" href="bower_components/mocha/mocha.css">
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="bower_components/mocha/mocha.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="bower_components/chai/chai.js"></script>
+    <script>
+        var assert = chai.assert;
+        var expect = chai.expect;
+        var should = chai.should();
+    </script>
 
-<html lang="en">
+    <!-- include source files here... -->
 
-    <head>
-        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title>GrowStuff</title>
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400' rel='stylesheet' type='text/css'>
-        
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
-        <script type="text/javascript" src="js/swipe.js"></script>
-        <script type="text/javascript" src="js/bootstrap.js"></script>
-        
+    <!-- include spec files here... -->
+    <script src="spec/test.js"></script>
 
-    </head>
-    <body>
-        <div class="header big">
-            <div class="container">
-                <img src="img/logo.png" height="40px" class="logo"/>
-                <nav role="navigation">
-                    <a href="index.html"><span class="active">Home</span></a>
-                    <a href="getting-started.html"><span>Getting started</span></a>
-                    <a href="diy.html"><span>DIY</span></a>
-                </nav>
-            </div>
-            
-        </div>
-        <div class="header small">
-            <img src="img/logo.png" height="40px" class="logo"/>
-            <nav role="navigation">
-                    <a href="index.html"><span class="active">Home</span></a>
-                    <a href="getting-started.html"><span>Getting started</span></a>
-                    <a href="diy.html"><span >DIY</span></a>
-            </nav>
-        </div>
-        <div class="header-case"> </div>
-        
-        <div class="section intro">
-            <div class="container">
-                <div class="col-md-6">
-                    <h1>What is growStuff?</h1>
-                    <p>Lorem ispun, on vera plus raed</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="img/rose.png" width="200px">
-                </div>
-            </div>    
-        
-        </div>
-        
-        <div class="section getstarted">
-            <div class="container">
-                <div class="col-md-6">
-                    <h1>What is growStuff?</h1>
-                    <p>Lorem ispun, on vera plus raed</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="img/rose.png" width="200px">
-                </div>
-            </div>    
-        
-        </div>
-        
-    
-    <div class="section techno">
-
-      <div class="container">
-        <h3 class="section-title text-center">Cutting edge techologies?</h3>
-  
-        <div class="container clients">
-
-          <div class="row">
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-              <a href="#"><img class="img-responsive" src="img/client-1.png" alt="client 1"></a>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-              <a href="#"><img class="img-responsive" src="img/client-2.png" alt="client 2"></a>
-            </div>
-            
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-              <a href="#"><img class="img-responsive" src="img/client-3.png" alt="client 3"></a>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-              <a href="#"><img class="img-responsive" src="img/client-4.png" alt="client 4"></a>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-              <a href="#"><img class="img-responsive" src="img/client-5.png" alt="client 5"></a>
-            </div>
-
-            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
-              <a href="#"><img class="img-responsive" src="img/client-6.png" alt="client 6"></a>
-            </div>
-          </div><!-- /.row -->
-
-        </div><!-- /.container -->
-
-      </div><!-- /.container -->
-
-    </div><!-- /.section-colored -->
-    
-    <div class="section-team">    
-        
-    </div>    
-    
-    <div class="section footer">    </div>
-    
-    </body>
-
+    <script>mocha.run()</script>
+</body>
 </html>
-    
