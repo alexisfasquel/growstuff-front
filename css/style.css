@@ -72,7 +72,7 @@ h1 {
 }
 
 .section.intro {
-    
+    background: rgba(22, 160, 133, 1);   
 }
 
 .section.techno {
@@ -82,7 +82,7 @@ h1 {
 }
 
 .section.footer {
-
+    background: #66595C;
 }
 
 .section.title {
