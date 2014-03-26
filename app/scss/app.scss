@@ -13,7 +13,7 @@ body {
 .top-header {
 	height: $topbar-height;
 	border-top: $primary-color 3px solid;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	padding: 35px 0 15px;
 
 	a.logo {
@@ -30,6 +30,14 @@ body {
 		span {
 			display: block;
 			padding: 3px 0 0 0;
+
+			em {
+				font-size: 0.45em;
+				font-weight: normal;
+				font-style: normal;
+				position: relative;
+				top: 7px;
+			}
 		}
 	}
 
@@ -117,7 +125,7 @@ body {
 .promo {
 	margin-top: 70px;
 
-	button {
+	a {
 		text-transform: uppercase;
 	}
 }
