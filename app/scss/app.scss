@@ -4,6 +4,11 @@
 
 body {
 	height: auto;
+}
+
+// ------------------------------------------------------
+//							Top
+// ------------------------------------------------------
 
 .top-header {
 	height: $topbar-height;
@@ -15,8 +20,17 @@ body {
 		display: block;
 		height: 30px;
 		font-size: 1.7em;
-		padding: 3px 0 0 45px;
-		background: url('../images/logo_m.png') no-repeat 0 0;
+
+		img, span { float: left; }
+
+		img {
+			margin-right: 10px;
+		}
+
+		span {
+			display: block;
+			padding: 3px 0 0 0;
+		}
 	}
 
 	nav {
@@ -24,7 +38,7 @@ body {
 			list-style-type: none;
 			float: right;
 			margin: 5px 0 0 0;
-				position: relative;
+			position: relative;
 			
 			li {
 				display: inline-block;
@@ -59,7 +73,6 @@ body {
 			}
 		}
 	}
-}
 }
 
 // ------------------------------------------------------
@@ -103,6 +116,7 @@ body {
 
 .promo {
 	margin-top: 70px;
+
 	button {
 		text-transform: uppercase;
 	}
