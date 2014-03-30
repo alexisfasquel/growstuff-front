@@ -19,8 +19,8 @@
         <div class="large-6 columns">
           <nav role="navigation" class="menu">
             <ul>
-              <li class="active"><a href="http://alexisfasquel.github.io/growstuff-front/">Home</a></li>
-              <li><a href="http://alexisfasquel.github.io/growstuff-front/posts/diy/index.html">Do It Yourself</a></li>
+              <li><a href="http://alexisfasquel.github.io/growstuff-front/">Home</a></li>
+              <li class="active"><a href="http://alexisfasquel.github.io/growstuff-front/posts/diy/index.html">Do It Yourself</a></li>
             </ul>
           </nav>
         </div>
@@ -32,22 +32,42 @@
         <div class="hide-for-small">
           <ul class="side-nav">
             
-                <li><a href="http://alexisfasquel.github.io/growstuff-front/posts/diy/index.html">DIY</a></li>
+                <li><a href="http://alexisfasquel.github.io/growstuff-front/posts/diy/">DIY</a></li>
             
-                <li><a href="http://alexisfasquel.github.io/growstuff-front/posts/server/index.html">Server</a></li>
+                <li><a href="http://alexisfasquel.github.io/growstuff-front/posts/server/">Server</a></li>
             
           </ul>
         </div>
       </div>
       <div class="large-9 medium-8 columns">
         <h1>DIY</h1>
-        undefined
+        Welcome on the Growstuff project. Watch carefully the instruction to creation your own self-suffisant plant!
         <hr/>
 
-        <h1><a name="introduction" class="anchor" href="#introduction"><span class="header-link"></span></a>Introduction</h1><p>This project has been built...
-qzdqd</p>
-<p>qzd</p>
-
+        <h2><a name="requierement" class="anchor" href="#requierement"><span class="header-link"></span></a>Requierement</h2><p>The project is divided into several repository hosted on <a href="https://github.com/">Github</a>.</p>
+<ul>
+<li><strong><a href="https://github.com/alexisfasquel/growstuff-connector-server">Connector server</a></strong></li>
+<li><strong><a href="https://github.com/alexisfasquel/growstuff-client">Client</a></strong></li>
+<li><strong><a href="https://github.com/alexisfasquel/growstuff-connector-client">Connector client</a></strong></li>
+<li><strong><a href="https://github.com/pmdartus/GrowStuff">Server</a></strong></li>
+</ul>
+<h2><a name="global-architecture" class="anchor" href="#global-architecture"><span class="header-link"></span></a>Global architecture</h2><p><img src="http://alexisfasquel.github.io/growstuff-front/images/0ffe1a35.archi.png" alt="General Architecture"></p>
+<h3><a name="controller" class="anchor" href="#controller"><span class="header-link"></span></a>Controller</h3><p>The microcontroller Arduino controls most of the electronics side of the project. It will transmit the sensors’ informations to the RaspberryPi and water the plant if necessary. To do so, it manages sensors and actuators:
+Humidity sensors (air and ground)</p>
+<ul>
+<li>Light sensor</li>
+<li>Temperature sensor</li>
+<li>Water level sensor</li>
+</ul>
+<p>The RaspberryPi manages the wi-fi connexion and controls the Arduino. It communicates with the web server to send it the informations and to receive instructions. It also has :</p>
+<ul>
+<li>a webcam to follow the plant growth and to send (on the owner request) selfies on twitter.</li>
+<li>a electronic circuit to control two LEDs.</li>
+</ul>
+<h3><a name="web-server" class="anchor" href="#web-server"><span class="header-link"></span></a>Web Server</h3><p>Semi-automatic care of the plant : thanks to the collected informations by the sensors, the server will water the plante automatically. It will also warn the owner when she hasn’t enough sun or a bad temperature.
+Follow your plant’s life : all the informations are stored. They can be viewed on the dashboard to follow your plant’s growth and health. You can even see your plant’s lifebook thanks to the webcam !
+The social plant ! The server will simulate an artificial intelligence so that your plant can tweet her moods and interact with other users. We could go further and locate the plant thanks to the wi-fi and then tweet nearby plants.</p>
+<h2><a name="interactions" class="anchor" href="#interactions"><span class="header-link"></span></a>Interactions</h2>
       </div>
     </div>
 
