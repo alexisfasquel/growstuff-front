@@ -120,6 +120,16 @@ body {
 	.list {
 		margin-top: 10px;
 	}
+
+	.team {
+		margin-top: 30px;
+	}
+
+	.name {
+		// font-size: 0.5em; 
+		strong { color: darken($primary-color, 20); }
+		.title { font-style: italic; }
+	}
 }
 
 .promo {
