@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrowStuff | Server</title>
+    <!-- build:css(.tmp) styles/app.css -->
+    <link rel="stylesheet" href="/styles/app.css" />
+    <link rel="stylesheet" href="/bower_components/pygments/css/monokai.css" />
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <header role="banner" class="top-header fixed">
+      <div class="row">
+        <div class="large-6 columns">
+          <a href="/" class="logo">
+            <img src="/images/logo_m.png" title="GrowStuff logo"/>
+            <span>GrowStuff <em>BETA</em><span>
+          </a>
+        </div>
+        <div class="large-6 columns">
+          <nav role="navigation" class="menu">
+            <ul>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="diy.html">Do It Yourself</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="master-header post-header">
+      <div class="row">
+        <h1>Server</h1>
+      </div>
+    </div>
+
+    <div class="main whitebg">
+      <div class="row">
+        <div class="large-12 columns">
+          <p>All Growstuff is built arround the server application. The application is built in Node.js and hase 3 utilities :</p>
+<ul>
+<li>Serve HTML pages to manage the plants and watch their status</li>
+<li>Recieve store the plants application</li>
+<li>Get notified when a tweet mention a plant.</li>
+</ul>
+<h2><a name="how-to-run-the-server" class="anchor" href="#how-to-run-the-server"><span class="header-link"></span></a>How to run the server</h2><h3><a name="required" class="anchor" href="#required"><span class="header-link"></span></a>Required</h3><ul>
+<li>Node.js</li>
+<li>MongoDB</li>
+<li>A twitter account to create the application</li>
+<li>A Dropbox account to store the selfies took bythe plants</li>
+</ul>
+<h3><a name="installation" class="anchor" href="#installation"><span class="header-link"></span></a>Installation</h3><p>First of all install <code>node</code> and install the dependences with <code>npm install</code>. You&#39;ll need to create a Twitter application to stream the tweet in real-time on Twitter ( be sure to set the application path to <code>http://localhost</code> on the Developer Panel ). Add create another application on Dropbox to store the photos, once it&#39;s ok generate a long living <code>access token</code>.</p>
+<h3><a name="configure" class="anchor" href="#configure"><span class="header-link"></span></a>Configure</h3><p>Before running the server, export the app configuration in the console.</p>
+<pre><code><div class="highlight"><pre><span class="kr">export</span> <span class="nx">TWITTER_CONSUMER_KEY</span><span class="o">=</span> <span class="p">...</span>
+<span class="kr">export</span> <span class="nx">TWITTER_CONSUMER_SECRET</span><span class="o">=</span> <span class="p">...</span>
+<span class="kr">export</span> <span class="nx">DROPBOX_ACCESS_TOKEN</span><span class="o">=</span> <span class="p">...</span>
+</pre></div>
+
+</code></pre><p>And finally start the server: <code>grunt</code>. The frontend is finally accessible on the <code>http://localhost:3000</code>.</p>
+<h2><a name="how-to-deploy" class="anchor" href="#how-to-deploy"><span class="header-link"></span></a>How to deploy</h2><p>The application can be easily deployed for free on <a href="http://heroku.com">Heroku</a>. The application need a MongoHQ plugin to start.</p>
+<blockquote>
+<p>Don&#39;t forget to override the <code>TWITTER_CALLBACK_URL</code> !</p>
+</blockquote>
+<h2><a name="how-does-it-works" class="anchor" href="#how-does-it-works"><span class="header-link"></span></a>How does it works</h2><h3><a name="database-architecture" class="anchor" href="#database-architecture"><span class="header-link"></span></a>Database architecture</h3><ul>
+<li><strong>User</strong>: The Twitter User, in Our Case the plants Account. It store the information for login and the access tokens to post for each Twitter account</li>
+<li><strong>Plant</strong>: The physical plant</li>
+<li><strong>Mention</strong>: All the interaction with the plants and Twiter ecosystem</li>
+<li><strong>Status</strong>: Informations about the plant status</li>
+</ul>
+<h3><a name="twitter-stream-reader" class="anchor" href="#twitter-stream-reader"><span class="header-link"></span></a>Twitter stream reader</h3><p>Growstuff server process each tweet containning the hashtah <code>#growstuff</code>, thanks to the Twitter streamer. You can avoid to process a certain hashtag becaus of the quantity of tweet to process if you don&#39;t reduce your scope.
+This worker run on the same process as the web server.</p>
+<h3><a name="plants-informations" class="anchor" href="#plants-informations"><span class="header-link"></span></a>Plants informations</h3><p>Because we need to discuss on both direction with the differents plants, 3 options were possibles to discuss with each plants :</p>
+<ul>
+<li>scheduled calls</li>
+<li>long polling</li>
+<li>socket</li>
+</ul>
+<p>However we wanted our application to be real-time and to avoid the server overload, we agreed to choose the socket choice. The plant worker run on <code>socketIO</code>. Furthermore the socket allow us to know if the plant is really connected or not.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js scripts/vendor/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+  </body>
+</html>

@@ -1,17 +1,57 @@
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
-    <title><%= post.title %></title>
-    <link href="/styles/monokai.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GrowStuff | <%= post.title %></title>
+    <!-- build:css(.tmp) styles/app.css -->
+    <link rel="stylesheet" href="/styles/app.css" />
+    <link rel="stylesheet" href="/bower_components/pygments/css/monokai.css" />
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
   </head>
   <body>
-    <ul>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/">Home</a></li>
-    </ul>
-    <h1><%= post.title %></h1>
-    <date><%= post.date %></date>
-    <%- post.content %>
-    <%- post.currentIndex %>
-    <%- posts.length %>
+    <header role="banner" class="top-header fixed">
+      <div class="row">
+        <div class="large-6 columns">
+          <a href="/" class="logo">
+            <img src="/images/logo_m.png" title="GrowStuff logo"/>
+            <span>GrowStuff <em>BETA</em><span>
+          </a>
+        </div>
+        <div class="large-6 columns">
+          <nav role="navigation" class="menu">
+            <ul>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="diy.html">Do It Yourself</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="master-header post-header">
+      <div class="row">
+        <h1><%= post.title %></h1>
+      </div>
+    </div>
+
+    <div class="main whitebg">
+      <div class="row">
+        <div class="large-12 columns">
+          <%- post.content %>
+        </div>
+      </div>
+    </div>
+
+    <!-- build:js scripts/vendor/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
   </body>
 </html>
