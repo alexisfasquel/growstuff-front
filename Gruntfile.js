@@ -250,7 +250,8 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass',
-                'copy:styles'
+                'copy:styles',
+                'pages'
             ],
             test: [
                 'copy:styles'
@@ -264,20 +265,30 @@ module.exports = function (grunt) {
             ]
         },
         buildcontrol: {
-          options: {
-            dir: 'dist',
-            commit: true,
-            push: true,
-            message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-          },
-          pages: {
             options: {
-              remote: 'git@github.com:alexisfasquel/growstuff-front.git',
-              branch: 'gh-pages'
+                dir: 'dist',
+                commit: true,
+                push: true,
+                message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+            },
+            pages: {
+                options: {
+                    remote: 'git@github.com:alexisfasquel/growstuff-front.git',
+                    branch: 'gh-pages'
+                }
             }
-          }
+        },
+        pages: {
+            posts: {
+                src: 'app/md',
+                dest: 'app',
+                layout: 'app/layout.ejs',
+                url: 'posts/:title/'
+            }
         }
     });
+
+    grunt.loadNpmTasks('grunt-pages');
 
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
@@ -338,4 +349,3 @@ module.exports = function (grunt) {
         'build'
     ]);
 };
-
