@@ -307,6 +307,9 @@ module.exports = function (grunt) {
                       console.log(match);
                        return match.slice(0,1) + "http://alexisfasquel.github.io/growstuff-front/" + match.slice(1);
                     }
+                  }, {
+                    from: "href=\"/\"",
+                    to: "href=\"http://alexisfasquel.github.io/growstuff-front/\""
                   }]
             }
       }
