@@ -290,10 +290,25 @@ module.exports = function (grunt) {
                 layout: 'app/layout.ejs',
                 url: 'posts/:title/'
             }
-        }
+        },
+        replace: {
+            url: {
+              src: ['dist/*.html', 'dist/posts/{,*/}*.html'],
+                  overwrite: true,
+                  replacements: [{
+                    from: /("\/)(images|scripts|styles|posts)(\/)/g,
+                    to: function(match) {
+                      console.log(match);
+                       return match.slice(0,1) + "http://alexisfasquel.github.io/growstuff-front" + match.slice(1);
+                    }
+                  }]
+            }
+      }
     });
 
     grunt.loadNpmTasks('grunt-pages');
+    grunt.loadNpmTasks('grunt-text-replace');
+
 
     grunt.registerTask('serve', function (target) {
         if (target === 'dist') {
@@ -333,7 +348,8 @@ module.exports = function (grunt) {
         // 'modernizr',
         'copy:dist',
         'rev',
-        'usemin'
+        'usemin',
+        'replace:url'
     ]);
 
     grunt.registerTask('deploy', [
