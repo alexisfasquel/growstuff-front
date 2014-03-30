@@ -163,13 +163,13 @@ module.exports = function (grunt) {
             options: {
                 dest: '<%= yeoman.dist %>'
             },
-            html: '<%= yeoman.app %>/index.html'
+            html: ['<%= yeoman.app %>/{,*/}*.html']
         },
         usemin: {
             options: {
                 assetsDirs: ['<%= yeoman.dist %>']
             },
-            html: ['<%= yeoman.dist %>/{,*/}*.html'],
+          html: ['<%= yeoman.dist %>/{,*/}*.html', '<%= yeoman.dist %>/posts/{,*/}*.html'],
             css: ['<%= yeoman.dist %>/styles/{,*/}*.css']
         },
         imagemin: {
