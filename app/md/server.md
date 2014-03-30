@@ -1,5 +1,5 @@
 {
-  title: "Server",
+  title: "Server"
 }
 
 All Growstuff is built arround the server application. The application is built in Node.js and hase 3 utilities :

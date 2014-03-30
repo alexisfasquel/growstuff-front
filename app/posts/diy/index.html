@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GrowStuff | <%= post.title %></title>
+    <title>GrowStuff | DIY</title>
     <!-- build:css(.tmp) styles/app.css -->
     <link rel="stylesheet" href="/styles/app.css" />
     <link rel="stylesheet" href="/bower_components/pygments/css/monokai.css" />
@@ -36,18 +36,23 @@
       <div class="large-3 medium-4 columns">
         <div class="hide-for-small">
           <ul class="side-nav">
-            <% posts.forEach(function (post) { %>
-                <li><a href="/<%= post.url %>"><%= post.title %></a></li>
-            <% }); %>
+            
+                <li><a href="/posts/diy/">DIY</a></li>
+            
+                <li><a href="/posts/server/">Server</a></li>
+            
           </ul>
         </div>
       </div>
       <div class="large-9 medium-8 columns">
-        <h1><%= post.title %></h1>
-        <%= post.subtitle %>
+        <h1>DIY</h1>
+        undefined
         <hr/>
 
-        <%- post.content %>
+        <h1><a name="introduction" class="anchor" href="#introduction"><span class="header-link"></span></a>Introduction</h1><p>This project has been built...
+qzdqd</p>
+<p>qzd</p>
+
       </div>
     </div>
 
