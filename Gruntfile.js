@@ -278,8 +278,8 @@ module.exports = function (grunt) {
             },
             pages: {
                 options: {
-                    remote: 'git@github.com:alexisfasquel/growstuff-front.git',
-                    branch: 'gh-pages'
+                    remote: 'git@github.com:CloudBotanist/cloudbotanist.github.io.git',
+                    branch: 'master'
                 }
             }
         },
@@ -290,29 +290,7 @@ module.exports = function (grunt) {
                 layout: 'app/layout.ejs',
                 url: 'posts/:title/'
             }
-        },
-        replace: {
-            url: {
-              src: ['dist/*.html', 'dist/posts/{,*/}*.html'],
-                  overwrite: true,
-                  replacements: [{
-                    from: /("\/)(images|scripts|styles|posts)(\/)/g,
-                    to: function(match) {
-                      console.log(match);
-                       return match.slice(0,1) + "http://alexisfasquel.github.io/growstuff-front" + match.slice(1);
-                    }
-                  },{
-                    from: /(")(images|scripts|styles|posts)(\/)/g,
-                    to: function(match) {
-                      console.log(match);
-                       return match.slice(0,1) + "http://alexisfasquel.github.io/growstuff-front/" + match.slice(1);
-                    }
-                  }, {
-                    from: "href=\"/\"",
-                    to: "href=\"http://alexisfasquel.github.io/growstuff-front/\""
-                  }]
-            }
-      }
+        }
     });
 
     grunt.loadNpmTasks('grunt-pages');
@@ -357,8 +335,7 @@ module.exports = function (grunt) {
         // 'modernizr',
         'copy:dist',
         'rev',
-        'usemin',
-        'replace:url'
+        'usemin'
     ]);
 
     grunt.registerTask('deploy', [
