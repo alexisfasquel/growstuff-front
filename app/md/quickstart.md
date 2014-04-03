@@ -7,8 +7,19 @@ After following the [Do It Yourself tutorial](/posts/diy), you now have a whole 
 
 ## Connect your plant to internet
 
-Explication avec JAVA luncher etc....
+Once connected to the sector, the RaspberryPi will wait that you send him the IDs to connect to the wifi. Our built-in software will help you to do in a few clics.
 
+### Download the app
+
+blabla
+
+### Make the configuration file
+
+Example...
+
+### Connect your plant!
+
+drag drop etc...
 
 ## Add it on our website
 
