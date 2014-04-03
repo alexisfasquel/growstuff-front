@@ -357,7 +357,8 @@ module.exports = function (grunt) {
         // 'modernizr',
         'copy:dist',
         'rev',
-        'usemin'
+        'usemin',
+        'replace:url'
     ]);
 
     grunt.registerTask('deploy', [
