@@ -290,7 +290,29 @@ module.exports = function (grunt) {
                 layout: 'app/layout.ejs',
                 url: 'posts/:title/'
             }
-        }
+        },
+        replace: {
+            url: {
+              src: ['dist/*.html', 'dist/posts/{,*/}*.html'],
+                  overwrite: true,
+                  replacements: [{
+                    from: /("\/)(images|scripts|styles|posts)(\/)/g,
+                    to: function(match) {
+                      console.log(match);
+                       return match.slice(0,1) + "http://cloudbotanist.github.io" + match.slice(1);
+                    }
+                  },{
+                    from: /(")(images|scripts|styles|posts)(\/)/g,
+                    to: function(match) {
+                      console.log(match);
+                       return match.slice(0,1) + "http://cloudbotanist.github.io/" + match.slice(1);
+                    }
+                  }, {
+                    from: "href=\"/\"",
+                    to: "href=\"http://cloudbotanist.github.io/\""
+                  }]
+            }
+      }
     });
 
     grunt.loadNpmTasks('grunt-pages');
