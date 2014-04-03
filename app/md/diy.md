@@ -1,6 +1,6 @@
 {
   title: "DIY",
-  subtitle: "Welcome on the Growstuff project. Watch carefully the instruction to creation your own self-suffisant plant!"
+  subtitle: "Welcome on the Growstuff project. Watch carefully the instruction to creation your own self-sufficient plant!"
 }
 
 ##Requierement

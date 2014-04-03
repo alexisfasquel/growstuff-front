@@ -1,5 +1,6 @@
 {
-  title: "Server"
+  title: "Server",
+  subtitle: "Documentation on the server behind your plant intelligence."
 }
 
 All Growstuff is built arround the server application. The application is built in Node.js and hase 3 utilities :
