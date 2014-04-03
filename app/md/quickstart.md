@@ -1,5 +1,5 @@
 {
-  title: "Getting started",
+  title: "Quick start",
   subtitle: "Get your plant in the cloud!"
 }
 
