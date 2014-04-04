@@ -3,6 +3,8 @@
   subtitle: "Welcome on the Growstuff project. Watch carefully the instruction to creation your own self-sufficient plant!"
 }
 
+> Please note that this documentation is still under construction but will soon be finish! :)
+
 ##Requierement
 
 The project is divided into several repository hosted on [Github](https://github.com/).
